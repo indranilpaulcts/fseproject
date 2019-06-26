@@ -1,0 +1,47 @@
+<div class="container">
+    <div class="row justify-content-center" style="margin-top: 50px">
+        <div class="col-md-8">
+            <h2>Add New Task</h2>
+            <hr>    
+            <form>
+                <div class="form-group row">
+                    <label class="col-sm-2 col-form-label-sm" for="inputTaskName">Task</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control form-control-sm" id="inputTaskName" placeholder="Task">
+                    </div>                    
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-2 col-form-label-sm" for="inputPriority">Priority</label>
+                    <div class="col-sm-10">
+                        <input type="range" min=0 max=30 value=5 step=1 class="form-control form-control-sm" id="inputPriority">
+                    </div>                    
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-2 col-form-label-sm" for="inputPTaskName">Parent Task</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control form-control-sm" id="inputPTaskName" placeholder="Parent Task">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-2 col-form-label-sm" for="inputStartDate">Start Date</label>
+                    <div class="col-sm-10">
+                        <input type="date" class="form-control form-control-sm" id="inputStartDate">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-2 col-form-label-sm" for="inputEndDate">End Date</label>
+                    <div class="col-sm-10">
+                        <input type="date" class="form-control form-control-sm" id="inputEndDate">
+                    </div>
+                </div>
+                <div class="form-group row">                    
+                    <div class="col-sm-2"></div>
+                    <div class="col-sm-10" style="text-align: left">
+                        <button type="button" class="btn btn-primary" (click)="addTask()">Add Task</button>&nbsp;
+                        <button type="button" class="btn btn-secondary" (click)="resetValue()">Reset</button>
+                    </div>
+                </div>                
+            </form>
+        </div>
+    </div>
+</div>
