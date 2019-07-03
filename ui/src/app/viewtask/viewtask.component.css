@@ -1,0 +1,14 @@
+.search-area{
+    width: auto;
+    height: auto;
+    padding: 5px;
+    margin: 5px;
+    background-color: whitesmoke;
+}
+.view-area{
+    width: auto;
+    height: auto;
+    padding: 5px;
+    margin: 10px 5px;
+    background-color: aliceblue;
+}

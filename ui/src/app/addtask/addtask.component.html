@@ -1,47 +1,71 @@
 <div class="container">
-    <div class="row justify-content-center" style="margin-top: 50px">
+    <div class="row justify-content-center" style="margin-top: 40px">
+
+        <!-- Error Alert -->
+        <div *ngIf="ifAnyError" class="alert alert-danger alert-dismissible fade show" role="alert">
+            <strong>Error!</strong> {{ errorAlertMessage }}
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+
         <div class="col-md-8">
-            <h2>Add New Task</h2>
-            <hr>    
+            <h3>Add New Task</h3>
+            <hr>
+
             <form>
                 <div class="form-group row">
                     <label class="col-sm-2 col-form-label-sm" for="inputTaskName">Task</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control form-control-sm" id="inputTaskName" placeholder="Task">
+                        <input type="text" class="form-control form-control-sm" id="inputTaskName" [(ngModel)] = "task.taskname" [ngModelOptions] = "{standalone: true}" placeholder="Task">
                     </div>                    
                 </div>
                 <div class="form-group row">
-                    <label class="col-sm-2 col-form-label-sm" for="inputPriority">Priority</label>
-                    <div class="col-sm-10">
-                        <input type="range" min=0 max=30 value=5 step=1 class="form-control form-control-sm" id="inputPriority">
-                    </div>                    
+                    <label class="col-sm-2 col-form-label-sm" for="inputPriority">Priority ({{task.priority}})</label>
+                    <div class="col-sm-1">
+                        <span>0</span> 
+                    </div>
+                    <div class="col-sm-8" style="padding: 0px;">
+                        <input type="range" min=0 max=30 step=1 class="form-control form-control-sm" id="inputPriority" [(ngModel)] = "task.priority" [ngModelOptions] = "{standalone: true}">
+                    </div> 
+                    <div class="col-sm-1">
+                        <span>30</span> 
+                    </div>                   
                 </div>
                 <div class="form-group row">
                     <label class="col-sm-2 col-form-label-sm" for="inputPTaskName">Parent Task</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control form-control-sm" id="inputPTaskName" placeholder="Parent Task">
+                        <input type="text" class="form-control form-control-sm" id="inputPTaskName" [(ngModel)] = "task.parenttaskname" [ngModelOptions] = "{standalone: true}" placeholder="Parent Task">
                     </div>
                 </div>
                 <div class="form-group row">
                     <label class="col-sm-2 col-form-label-sm" for="inputStartDate">Start Date</label>
                     <div class="col-sm-10">
-                        <input type="date" class="form-control form-control-sm" id="inputStartDate">
+                        <input type="date" class="form-control form-control-sm" id="inputStartDate" [(ngModel)] = "task.startdt" [ngModelOptions] = "{standalone: true}" >
                     </div>
                 </div>
                 <div class="form-group row">
                     <label class="col-sm-2 col-form-label-sm" for="inputEndDate">End Date</label>
                     <div class="col-sm-10">
-                        <input type="date" class="form-control form-control-sm" id="inputEndDate">
+                        <input type="date" class="form-control form-control-sm" id="inputEndDate" [(ngModel)] = "task.enddt" [ngModelOptions] = "{standalone: true}">
                     </div>
                 </div>
                 <div class="form-group row">                    
                     <div class="col-sm-2"></div>
                     <div class="col-sm-10" style="text-align: left">
-                        <button type="button" class="btn btn-primary" (click)="addTask()">Add Task</button>&nbsp;
-                        <button type="button" class="btn btn-secondary" (click)="resetValue()">Reset</button>
+                        <button type="button" class="btn btn-sm btn-primary" (click)="addTask()"><i class="fa fa-plus"></i>&nbsp;Add Task</button>&nbsp;
+                        <button type="button" class="btn btn-sm btn-secondary" (click)="resetValue()"><i class="fa fa-refresh"></i>&nbsp;Reset Task</button>
                     </div>
                 </div>                
             </form>
-        </div>
+        
+            <!-- Success Message -->
+            <div *ngIf="ifPostedSuccessfully" class="alert alert-success" style="margin-top: 15px" role="alert">
+                <h4 class="alert-heading">Success!</h4>
+                <p>A new task {{task.taskname}} has been added successfully!</p>
+                <hr>
+                <p class="mb-0"><a href="" [routerLink]="['/viewtask']">Click here</a> to view/edit all other tasks.</p>
+            </div>
+        </div>       
     </div>
 </div>

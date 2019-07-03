@@ -5,6 +5,11 @@ import { ViewtaskComponent } from './viewtask/viewtask.component';
 
 const routes: Routes = [
   {
+    path: '',
+    pathMatch: 'full',
+    redirectTo: 'addtask'
+  },
+  {
     path: 'addtask',
     component: AddtaskComponent
   },
