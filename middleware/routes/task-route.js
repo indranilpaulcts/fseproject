@@ -7,6 +7,12 @@ module.exports = (app) => {
     // Retrieve all tasks
     app.get('/get-task', api.findall);
 
-    // Update a task with name
-    app.put('/upd-task/:id', api.update);
+    // Retrieve specific task with id
+    app.get('/get-task/:id', api.find);
+
+    // Retrieve all parents
+    app.get('/get-parent', api.findparent);
+
+    // Update a task with id
+    app.put('/upd-task/:id', api.updtask);
 }

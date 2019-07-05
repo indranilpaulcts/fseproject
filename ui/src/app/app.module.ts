@@ -7,15 +7,18 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AddtaskComponent } from './addtask/addtask.component';
 import { ViewtaskComponent } from './viewtask/viewtask.component';
+import { UpdtaskComponent } from './updtask/updtask.component';
 
 import { AddtaskService } from './addtask/addtask.service';
 import { ViewtaskService } from './viewtask/viewtask.service';
+import { UpdtaskService } from './updtask/updtask.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     AddtaskComponent,
-    ViewtaskComponent
+    ViewtaskComponent,
+    UpdtaskComponent
   ],
   imports: [
     BrowserModule,
@@ -25,7 +28,8 @@ import { ViewtaskService } from './viewtask/viewtask.service';
   ],
   providers: [
     AddtaskService,
-    ViewtaskService
+    ViewtaskService,
+    UpdtaskService
   ],
   bootstrap: [AppComponent]
 })

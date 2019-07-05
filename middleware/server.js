@@ -3,6 +3,7 @@ const express = require('express');
 const bodyparser = require('body-parser');
 const mongoose = require('mongoose');
 const config = require('./config/server-config');
+const logger = require('./config/winston');
 
 // [ Create Express App ]-------------------------------------------------
 const app = express()
@@ -26,13 +27,17 @@ mongoose.Promise = global.Promise;
 mongoose.connect(config.db.url, {
     useNewUrlParser: true
 }).then(()=>{
-    console.log('Successfully connected to the database: ' + config.db.name);
+    logger.info('Successfully connected to the database: ' + config.db.name);
 }).catch(err =>{
-    console.log('Failed to connect to the database due to: ', err);
+    logger.error('Failed to connect to the database due to: ', err);
 });
+
+mongoose.set('useNewUrlParser', true);
+mongoose.set('useFindAndModify', false);
+mongoose.set('useCreateIndex', true);
 
 // [ Create App Server ]--------------------------------------------------
 app.listen(config.server.port, config.server.host, () => {
-    console.log(`\nStarted server at http://${config.server.host}:${config.server.port}/`);
+    logger.info(`Started server at http://${config.server.host}:${config.server.port}/`);
 });
 // --EOF--

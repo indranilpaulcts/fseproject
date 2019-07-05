@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AddtaskService } from './addtask.service';
-import { Task } from '../task-model';
+import { Task, Parent } from '../task-model';
 
 @Component({
   selector: 'app-addtask',
@@ -10,9 +10,11 @@ import { Task } from '../task-model';
 export class AddtaskComponent implements OnInit {
 
   private task = new Task();
+  allParent: Parent[];
   ifAnyError: boolean;
   errorAlertMessage: string;
   ifPostedSuccessfully: boolean;
+  selectparenttaskname: string;
 
   constructor(private addtaskService: AddtaskService) {
     this.task.taskname = '';
@@ -25,18 +27,51 @@ export class AddtaskComponent implements OnInit {
     this.ifAnyError = false;
     this.errorAlertMessage = '';
     this.ifPostedSuccessfully = false;
+    this.selectparenttaskname = '';
   }
 
   ngOnInit() {
-    this.addtaskService.getallnames();
+    this.addtaskService.getallparent().subscribe((res: any) => {
+        if (res) {
+          this.allParent = res;
+        }
+      }, (err) => {
+        this.ifAnyError = true;
+        this.errorAlertMessage = err.message;
+    });
+  }
+
+  validationOfForm(): boolean {
+    if (this.task.taskname.trim() === '') {
+      return false;
+    }
+    if (this.task.parenttaskname.trim() === '' && this.selectparenttaskname === 'New' ) {
+      return false;
+    }
+    if (!this.task.startdt) {
+      return false;
+    }
+    if (!this.task.enddt) {
+      return false;
+    }
+    return true;
   }
 
   addTask(): void {
     this.resetMsg();
+    const formOk = this.validationOfForm();
+    if (formOk === false) {
+      this.ifAnyError = true;
+      this.errorAlertMessage = 'Empty field!';
+      return;
+    }
+    if (this.selectparenttaskname !== 'New') {
+      this.task.parenttaskname = this.selectparenttaskname;
+    }
     this.addtaskService.addnewtask(this.task).subscribe((res: any) => {
         if (res) {
           this.ifPostedSuccessfully = true;
-          // this.resetValue();
+          this.resetValue();
         }
       }, (err) => {
         this.ifAnyError = true;

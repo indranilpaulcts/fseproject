@@ -6,7 +6,7 @@ import { Task } from '../task-model';
 @Injectable({
   providedIn: 'root'
 })
-export class ViewtaskService {
+export class UpdtaskService {
 
   private uriBase: string;
   private apiGetTask: string;
@@ -18,8 +18,8 @@ export class ViewtaskService {
     this.apiUpdTask = 'upd-task/';
   }
 
-  getalltasks(): Observable<any> {
-    const newUrl = this.uriBase + this.apiGetTask;
+  getsingletask(pTaskId: string): Observable<any> {
+    const newUrl = this.uriBase + this.apiGetTask + pTaskId;
     return this.httpConnection.get(newUrl);
   }
 

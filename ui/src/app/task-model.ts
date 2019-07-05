@@ -6,4 +6,11 @@ export class Task {
     startdt: Date;
     enddt: Date;
     status: boolean;
+    finished: boolean;
+    running: boolean;
 }
+
+export class Parent {
+    parentname: string;
+}
+

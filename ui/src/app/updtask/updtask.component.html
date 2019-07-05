@@ -1,17 +1,18 @@
 <div class="container">
-    <br>
-    <!-- Error Alert -->
-    <div *ngIf="ifAnyError" class="alert alert-danger alert-dismissible fade show" role="alert">
-        <strong>Error!</strong> {{ errorAlertMessage }}
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-        </button>
-    </div>
-    <div class="row justify-content-center" style="margin-top: 10px">
+    <div class="row justify-content-center" style="margin-top: 40px">
+
+        <!-- Error Alert -->
+        <div *ngIf="ifAnyError" class="alert alert-danger alert-dismissible fade show" role="alert">
+            <strong>Error!</strong> {{ errorAlertMessage }}
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
 
         <div class="col-md-8">
-            <h3>Add New Task</h3>
+            <h3>Update Task</h3>
             <hr>
+
             <form>
                 <div class="form-group row">
                     <label class="col-sm-2 col-form-label-sm" for="inputTaskName">Task</label>
@@ -33,16 +34,8 @@
                 </div>
                 <div class="form-group row">
                     <label class="col-sm-2 col-form-label-sm" for="inputPTaskName">Parent Task</label>
-                    <div class="col-sm-10 row">
-                        <div class="col-sm-6">
-                            <select style="width: auto" [(ngModel)] = "selectparenttaskname" [ngModelOptions] = "{standalone: true}">
-                                <option value="New">----- Add New Parent -----</option>
-                                <option *ngFor="let obj of allParent" [value]="obj.parentname">{{obj.parentname}}</option>
-                            </select>
-                        </div>
-                        <div class="col-sm-6" *ngIf="selectparenttaskname === 'New'">
-                            <input type="text" class="form-control form-control-sm" id="inputPTaskName" [(ngModel)] = "task.parenttaskname" [ngModelOptions] = "{standalone: true}" placeholder="Parent Task">
-                        </div>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control form-control-sm" id="inputPTaskName" [(ngModel)] = "task.parenttaskname" [ngModelOptions] = "{standalone: true}" placeholder="Parent Task">
                     </div>
                 </div>
                 <div class="form-group row">
@@ -60,8 +53,8 @@
                 <div class="form-group row">                    
                     <div class="col-sm-2"></div>
                     <div class="col-sm-10" style="text-align: left">
-                        <button type="button" class="btn btn-sm btn-primary" (click)="addTask()"><i class="fa fa-plus"></i>&nbsp;Add Task</button>&nbsp;
-                        <button type="button" class="btn btn-sm btn-secondary" (click)="resetValue()"><i class="fa fa-refresh"></i>&nbsp;Reset Task</button>
+                        <button type="button" class="btn btn-sm btn-success" (click)="saveTask()"><i class="fa fa-floppy-o"></i>&nbsp;Save Task</button>&nbsp;
+                        <button type="button" class="btn btn-sm btn-secondary" (click)="cancelEdit()"><i class="fa fa-undo"></i>&nbsp;Back</button>
                     </div>
                 </div>                
             </form>
@@ -69,7 +62,7 @@
             <!-- Success Message -->
             <div *ngIf="ifPostedSuccessfully" class="alert alert-success" style="margin-top: 15px" role="alert">
                 <h4 class="alert-heading">Success!</h4>
-                <p>A new task <strong>{{task.taskname}}</strong> has been added successfully!</p>
+                <p>Task <strong>{{task.taskname}}</strong> has been updated successfully!</p>
                 <hr>
                 <p class="mb-0"><a href="" [routerLink]="['/viewtask']">Click here</a> to view/edit all other tasks.</p>
             </div>
