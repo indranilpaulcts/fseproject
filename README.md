@@ -53,14 +53,14 @@ Clone this repository and install required softwares. The dependencies will be i
 
 #### Commands to launch UI
 ```
-cd middleware
+cd ui
 npm install
 ng serve --open
 ```
 
 #### Commands to launch MIDDLEWARE
 ```
-cd ui
+cd middleware
 npm install
 node server.js
 ```
