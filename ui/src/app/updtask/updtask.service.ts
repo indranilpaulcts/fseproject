@@ -11,11 +11,13 @@ export class UpdtaskService {
   private uriBase: string;
   private apiGetTask: string;
   private apiUpdTask: string;
+  private apiGetParent: string;
 
   constructor(private httpConnection: HttpClient) {
     this.uriBase = 'http://localhost:5151/';
     this.apiGetTask = 'get-task/';
     this.apiUpdTask = 'upd-task/';
+    this.apiGetParent = 'get-parent/';
   }
 
   getsingletask(pTaskId: string): Observable<any> {
@@ -26,5 +28,10 @@ export class UpdtaskService {
   updatetask(pTaskId: string, pPayload: Task): Observable<any> {
     const newUrl = this.uriBase + this.apiUpdTask + pTaskId;
     return this.httpConnection.put(newUrl, pPayload);
+  }
+
+  getallparent(): Observable<any> {
+    const newUrl = this.uriBase + this.apiGetParent;
+    return this.httpConnection.get(newUrl);
   }
 }

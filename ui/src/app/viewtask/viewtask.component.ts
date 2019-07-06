@@ -41,7 +41,6 @@ export class ViewtaskComponent implements OnInit {
   ngOnInit() {
     this.viewtaskService.getalltasks().subscribe((res: any) => {
       if (res) {
-        console.log(res);
         this.allTasks = res;
         this.originalTaskList = this.allTasks;
       }

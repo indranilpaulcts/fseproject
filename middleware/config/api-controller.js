@@ -70,7 +70,13 @@ exports.findall = (req, res) => {
             if (task[i].enddt < new Date()) {
                 task[i].running = false;
                 task[i].finished = true;
-            }            
+            } 
+            
+            Task.findByIdAndUpdate(task[i].__id, task, (err, task) => {
+                if(err){
+                    logger.error(`${err.status || 500} - ${err.message} - ${req.originalUrl} - ${req.method} - ${req.ip}`);
+                }
+            });
         }
         logger.info(`200: All records have been fetched - ${req.originalUrl} - ${req.method} - ${req.ip}`);
         res.status(200).send(task); 

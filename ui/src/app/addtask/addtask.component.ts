@@ -20,10 +20,7 @@ export class AddtaskComponent implements OnInit {
     this.task.taskname = '';
     this.task.priority = 5;
     this.task.parenttaskname = '';
-    this.task.startdt = new Date();
-    this.task.enddt = new Date();
     this.task.status = false;
-
     this.ifAnyError = false;
     this.errorAlertMessage = '';
     this.ifPostedSuccessfully = false;
@@ -42,10 +39,10 @@ export class AddtaskComponent implements OnInit {
   }
 
   validationOfForm(): boolean {
-    if (this.task.taskname.trim() === '') {
+    if (this.task.taskname.trim().length === 0) {
       return false;
     }
-    if (this.task.parenttaskname.trim() === '' && this.selectparenttaskname === 'New' ) {
+    if (this.task.parenttaskname.trim().length === 0 && this.selectparenttaskname === 'New' ) {
       return false;
     }
     if (!this.task.startdt) {
