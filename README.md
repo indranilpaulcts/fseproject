@@ -2,6 +2,7 @@
 
 This the FSE Capsule Project for Cognizant, given by IIHT. I have used  **MongoDb - Express - Angular - NodeJS** combiation as this is a **MEAN** Stack FSE course.
 
+
 ## Getting Started
 
 The project is divided in to two folders:
@@ -9,11 +10,28 @@ The project is divided in to two folders:
     1) ui -> Includes the Angular UI codes
     2) middleware -> Includes the backend API implemented using by NodeJS 
 
+
 ### Prerequisites
 
     Angular CLI: 8.0.4
     Node: 10.15.3
     MongoDB shell: v3.4.2
+
+
+### Business-Requirement: 
+
+    The Task Manager Single Page Application allows you to manage task and set their priorities in range of 0 to 30. Each task will have parent task (optional/another task can be made parent), start date and end date.
+    
+    Below are the features of Task Manager:
+
+    1) Add/Edit/View/Delete Task
+    2) You can make one task a parent of another task. 
+    3) On view task screen:
+        a. User can search task by task name, parent task, start date, end date and priority.
+        b. User can edit task
+        c. User can end the task once it is finished. Once ended, user cannot edit the task. User can only view the task once finished.
+    4) All search fields on view task screen are using auto-filter property of angularjs.
+
 
 ### Other Libraries
 ```
@@ -30,26 +48,30 @@ NodeJS:-
 
 ### Installing
 
-Clone thise repository and install required softwares. The dependencies will be installed using the **npm install** command. Then launch the UI & Middlware separately.
+Clone this repository and install required softwares. The dependencies will be installed using the **npm install** command. Then launch the UI & Middlware separately.
 
+
+#### Commands to launch UI
 ```
 cd middleware
 npm install
 ng serve --open
+```
 
+#### Commands to launch MIDDLEWARE
+```
 cd ui
 npm install
 node server.js
 ```
 
-Launch the mongod
+#### Commands to launch MONGODB
 ```
 cd C:\Program Files\MongoDB\Server\3.4\bin
 mongod
 ```
 
 ## Log 
-
 Two log files will be generated at middleware\logs\ folder
 
     1) app.log
@@ -77,5 +99,5 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## Acknowledgments
 
-* IIHT
+* IIHT Team
 * Cognizant
