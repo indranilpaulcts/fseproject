@@ -93,9 +93,18 @@ Two log files will be generated at middleware\logs\ folder
 
 We use [GIT](https://github.com/) for versioning. For the versions available, see the [fseproject](https://github.com/indranilpaulcts/fseproject). 
 
+## Screenshots - Add Task Page
+![addtaskpage](https://user-images.githubusercontent.com/49974132/60759847-309a8300-a049-11e9-9906-48b57b4747ad.PNG)
+
+## Screenshots - Update Task Page
+![uptaskpage](https://user-images.githubusercontent.com/49974132/60759877-a6065380-a049-11e9-8589-e8cb34ecfb6d.PNG)
+
+## Screenshots - View Task Page
+![uptaskpage](https://user-images.githubusercontent.com/49974132/60759877-a6065380-a049-11e9-8589-e8cb34ecfb6d.PNG)
+
 ## Authors
 
-* **Indranil Paul** - *Development work* - [indranilpaulcts](https://github.com/indranilpaulcts)
+* **Indranil Paul** - *Cognizant* - [indranilpaulcts](https://github.com/indranilpaulcts)
 
 
 ## License
