@@ -84,6 +84,11 @@ Two log files will be generated at middleware\logs\ folder
 * [MongoDB](https://www.mongodb.com/) - Database
 
 
+## Build
+
+* [Jenkins](http://localhost:8080/job/fsecapsule/) - The jenkins project to generate build 
+
+
 ## Versioning
 
 We use [GIT](https://github.com/) for versioning. For the versions available, see the [fseproject](https://github.com/indranilpaulcts/fseproject). 

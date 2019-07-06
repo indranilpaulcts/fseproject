@@ -2,24 +2,24 @@ pipeline {
     agent any
 
     stages {
-        stage('Clone Branches') {
+        stage('Pull Master') {
             steps {
                bat 'git pull origin master'
             }
         }
-        // stage('NPM Install for UI') {
-        //     steps {
-        //         dir("${JENKINS_HOME}\\workspace\\fseproject_master\\ui"){
-        //             bat 'npm install'
-        //         } 
-        //     }
-        // }
-        // stage('NPM Install for Middleware') {
-        //     steps {
-        //         dir("${JENKINS_HOME}\\workspace\\fseproject_master\\middleware"){
-        //             bat 'npm install'
-        //         }                
-        //     }
-        // }
+        stage('NPM Install for UI') {
+            steps {
+                dir("${JENKINS_HOME}\\workspace\\fsecapsule\\ui"){
+                    bat 'npm install'
+                } 
+            }
+        }
+        stage('NPM Install for Middleware') {
+            steps {
+                dir("${JENKINS_HOME}\\workspace\\fsecapsule\\middleware"){
+                    bat 'npm install'
+                }                
+            }
+        }
     }
 }
