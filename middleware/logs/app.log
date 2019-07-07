@@ -32,3 +32,29 @@
 {"message":"500 - Cast to ObjectId failed for value \"undefined\" at path \"_id\" for model \"task\" - /get-task/undefined - GET - 127.0.0.1","level":"error","ts":"2019-07-07T07:59:24.063Z"}
 {"message":"200: All parents have been fetched - /get-parent/ - GET - 127.0.0.1","level":"info","ts":"2019-07-07T07:59:24.063Z"}
 {"message":"200: All records have been fetched - /get-task/ - GET - 127.0.0.1","level":"info","ts":"2019-07-07T07:59:24.063Z"}
+{"message":"500 - Cast to ObjectId failed for value \"undefined\" at path \"_id\" for model \"task\" - /get-task/undefined - GET - 127.0.0.1","level":"error","ts":"2019-07-07T07:59:24.063Z"}
+{"message":"200: All parents have been fetched - /get-parent/ - GET - 127.0.0.1","level":"info","ts":"2019-07-07T07:59:24.063Z"}
+{"message":"500 - Cast to ObjectId failed for value \"undefined\" at path \"_id\" for model \"task\" - /get-task/undefined - GET - 127.0.0.1","level":"error","ts":"2019-07-07T07:59:24.063Z"}
+{"message":"200: All records have been fetched - /get-task/ - GET - 127.0.0.1","level":"info","ts":"2019-07-07T07:59:24.063Z"}
+{"message":"200: All parents have been fetched - /get-parent/ - GET - 127.0.0.1","level":"info","ts":"2019-07-07T07:59:24.063Z"}
+{"message":"200: All records have been fetched - /get-task/ - GET - 127.0.0.1","level":"info","ts":"2019-07-07T07:59:24.063Z"}
+{"message":"200: All records have been fetched - /get-task/ - GET - 127.0.0.1","level":"info","ts":"2019-07-07T07:59:24.063Z"}
+{"message":"200: All parents have been fetched - /get-parent/ - GET - 127.0.0.1","level":"info","ts":"2019-07-07T07:59:24.063Z"}
+{"message":"500 - Cast to ObjectId failed for value \"undefined\" at path \"_id\" for model \"task\" - /get-task/undefined - GET - 127.0.0.1","level":"error","ts":"2019-07-07T07:59:24.063Z"}
+{"message":"200: All records have been fetched - /get-task/ - GET - 127.0.0.1","level":"info","ts":"2019-07-07T07:59:24.063Z"}
+{"message":"200: All parents have been fetched - /get-parent/ - GET - 127.0.0.1","level":"info","ts":"2019-07-07T07:59:24.063Z"}
+{"message":"500 - Cast to ObjectId failed for value \"undefined\" at path \"_id\" for model \"task\" - /get-task/undefined - GET - 127.0.0.1","level":"error","ts":"2019-07-07T07:59:24.063Z"}
+{"message":"200: All parents have been fetched - /get-parent/ - GET - 127.0.0.1","level":"info","ts":"2019-07-07T07:59:24.063Z"}
+{"message":"500 - Cast to ObjectId failed for value \"undefined\" at path \"_id\" for model \"task\" - /get-task/undefined - GET - 127.0.0.1","level":"error","ts":"2019-07-07T07:59:24.063Z"}
+{"message":"200: All records have been fetched - /get-task/ - GET - 127.0.0.1","level":"info","ts":"2019-07-07T07:59:24.063Z"}
+{"message":"200: All parents have been fetched - /get-parent/ - GET - 127.0.0.1","level":"info","ts":"2019-07-07T07:59:24.063Z"}
+{"message":"500 - Cast to ObjectId failed for value \"undefined\" at path \"_id\" for model \"task\" - /get-task/undefined - GET - 127.0.0.1","level":"error","ts":"2019-07-07T07:59:24.063Z"}
+{"message":"200: All records have been fetched - /get-task/ - GET - 127.0.0.1","level":"info","ts":"2019-07-07T07:59:24.063Z"}
+{"message":"200: All records have been fetched - /get-task/ - GET - 127.0.0.1","level":"info","ts":"2019-07-07T07:59:24.063Z"}
+{"message":"200: All parents have been fetched - /get-parent/ - GET - 127.0.0.1","level":"info","ts":"2019-07-07T07:59:24.063Z"}
+{"message":"500 - Cast to ObjectId failed for value \"undefined\" at path \"_id\" for model \"task\" - /get-task/undefined - GET - 127.0.0.1","level":"error","ts":"2019-07-07T07:59:24.063Z"}
+{"message":"200: All records have been fetched - /get-task/ - GET - 127.0.0.1","level":"info","ts":"2019-07-07T07:59:24.063Z"}
+{"message":"200: All parents have been fetched - /get-parent/ - GET - 127.0.0.1","level":"info","ts":"2019-07-07T07:59:24.063Z"}
+{"message":"500 - Cast to ObjectId failed for value \"undefined\" at path \"_id\" for model \"task\" - /get-task/undefined - GET - 127.0.0.1","level":"error","ts":"2019-07-07T07:59:24.063Z"}
+{"message":"200: All parents have been fetched - /get-parent/ - GET - 127.0.0.1","level":"info","ts":"2019-07-07T07:59:24.063Z"}
+{"message":"200: All records have been fetched - /get-task/ - GET - 127.0.0.1","level":"info","ts":"2019-07-07T07:59:24.063Z"}
