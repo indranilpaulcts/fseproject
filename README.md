@@ -100,7 +100,7 @@ We use [GIT](https://github.com/) for versioning. For the versions available, se
 ![uptaskpage](https://user-images.githubusercontent.com/49974132/60759877-a6065380-a049-11e9-8589-e8cb34ecfb6d.PNG)
 
 ## Screenshots - View Task Page
-![uptaskpage](https://user-images.githubusercontent.com/49974132/60759877-a6065380-a049-11e9-8589-e8cb34ecfb6d.PNG)
+![viewtaskpage](https://user-images.githubusercontent.com/49974132/60767122-85351100-a0d0-11e9-9f4f-8cfa0e4b9f49.PNG)
 
 ## Authors
 
