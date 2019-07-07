@@ -21,10 +21,10 @@ pipeline {
                 }                
             }
         }
-        stage('Run TestCase for UI') {
+        stage('Create Build') {
             steps {
                 dir("${JENKINS_HOME}\\workspace\\fsecapsule\\ui"){
-                    bat 'npm run ng test'
+                    bat 'npm run ng -- build --prod'
                 }                
             }
         }
