@@ -1,5 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { RouterTestingModule } from '@angular/router/testing';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 import { ViewtaskComponent } from './viewtask.component';
 
 describe('ViewtaskComponent', () => {
@@ -8,6 +10,11 @@ describe('ViewtaskComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [
+        RouterTestingModule,
+        FormsModule,
+        HttpClientModule
+      ],
       declarations: [ ViewtaskComponent ]
     })
     .compileComponents();
@@ -21,5 +28,10 @@ describe('ViewtaskComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('ifAnyError check will be False', () => {
+    component.resetMsg();
+    expect(component.ifAnyError).toBeFalsy();
   });
 });

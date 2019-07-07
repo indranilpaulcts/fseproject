@@ -9,7 +9,7 @@ import { Task, Parent } from '../task-model';
 })
 export class AddtaskComponent implements OnInit {
 
-  private task = new Task();
+  task = new Task();
   allParent: Parent[];
   ifAnyError: boolean;
   errorAlertMessage: string;
