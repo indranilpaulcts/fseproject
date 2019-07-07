@@ -21,5 +21,12 @@ pipeline {
                 }                
             }
         }
+        stage('Run TestCase for UI') {
+            steps {
+                dir("${JENKINS_HOME}\\workspace\\fsecapsule\\ui"){
+                    bat 'ng test'
+                }                
+            }
+        }
     }
 }
